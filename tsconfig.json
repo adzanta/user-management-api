@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    /* Pengaturan Output & Build */
+    "target": "ES2020",                     // Versi JavaScript yang dihasilkan
+    "module": "commonjs",                   // Sistem modul yang digunakan Node.js
+    "rootDir": "src",                        // Folder tempat kode sumber TypeScript
+    "outDir": "dist",                        // Folder hasil kompilasi
+
+    /* Resolusi Modul */
+    "esModuleInterop": true,                 // Mengizinkan import default dari modul CommonJS
+    "forceConsistentCasingInFileNames": true, // Konsistensi huruf besar/kecil pada nama file
+    "resolveJsonModule": true,               // Mengizinkan import file JSON
+    "moduleResolution": "node",              // Cara Node.js mencari modul
+
+    /* Pengecekan Tipe yang Ketat */
+    "strict": true,                          // Aktifkan semua pengecekan tipe ketat
+    "noImplicitAny": true,                   // Larang variabel tanpa tipe
+    "strictNullChecks": true,                // Null dan undefined harus di-handle
+    "skipLibCheck": true,                    // Lewati pengecekan tipe pada file deklarasi (.d.ts)
+
+    /* Source Map untuk Debug */
+    "sourceMap": true,                       // Menghasilkan file .map agar mudah debugging
+
+    /* Output Bersih */
+    "noEmitOnError": true                    // Tidak membuat file JS jika ada error tipe
+  },
+  "include": ["src"],                        // File yang akan dikompilasi (dalam folder src/)
+  "exclude": ["node_modules", "dist"]        // Folder yang diabaikan saat kompilasi
+}

@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql-user-management
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: apis123
+      MYSQL_DATABASE: user_management
+    ports:
+      - "3308:3306"
+    volumes:
+      - usermgmt_data:/var/lib/mysql
+
+volumes:
+  usermgmt_data:
