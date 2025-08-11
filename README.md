@@ -94,7 +94,8 @@ Server akan berjalan di http://localhost:3000
 ---
 ### 🧪 Testing API
 - POST /users
-```Request Body
+Request Body
+```
 {
   "nama": "Alhafidz",
   "email": "william@example.com",
