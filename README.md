@@ -22,7 +22,8 @@ Dilengkapi dengan **validasi input** menggunakan Zod dan **ORM Prisma** untuk ak
 - **Error Handling**: Pesan error informatif.
 - **Database**: MySQL (Docker).
 - **ORM**: Prisma.
-- **Documentation**:
+- **Documentation**: [Postman Collection – User Management API](https://run.pstmn.io/button.svg)(https://www.postman.com/spaceflight-specialist-56569930/tugas-api/collection/pt0k4my/user-management-api)
+
 
 ---
 
