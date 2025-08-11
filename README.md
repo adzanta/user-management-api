@@ -93,8 +93,7 @@ Server akan berjalan di http://localhost:3000
 
 ---
 ### 🧪 Testing API
-- POST /users
-Request Body
+- Request Body POST /users
 ```
 {
   "nama": "Alhafidz",
@@ -120,7 +119,7 @@ Response
     }
 }
 ```
-- Contoh request body untuk PUT /users/:id
+- Request body PUT /users/:id
 ```
 {
   "nama": "Alhafidz update",
@@ -129,6 +128,7 @@ Response
   "statusAktif": false,
   "department": "HR"
 }
+```
 Response
 ```
 {
@@ -143,5 +143,60 @@ Response
         "createdAt": "2025-08-11T16:20:39.436Z",
         "updatedAt": "2025-08-11T16:35:21.801Z"
     }
+}
+```
+- GET /users
+```
+{
+    "data": [
+        {
+            "id": 2,
+            "nama": "Budi Update",
+            "email": "budiupdate@example.com",
+            "no_hp": "081298765432",
+            "statusAktif": false,
+            "department": "HR",
+            "createdAt": "2025-08-10T19:52:47.392Z",
+            "updatedAt": "2025-08-10T19:53:15.645Z"
+        },
+        {
+            "id": 3,
+            "nama": "Alhafidz update",
+            "email": "williamupdate@example.com",
+            "no_hp": "081298765123",
+            "statusAktif": false,
+            "department": "HR",
+            "createdAt": "2025-08-11T16:20:39.436Z",
+            "updatedAt": "2025-08-11T16:35:21.801Z"
+        }
+    ]
+}
+```
+- DELETE /users/:id
+```
+{
+    "message": "User deleted successfully"
+}
+```
+### 🧪 Testing API Eror
+- Request Body POST /users atau PUT /users/:id
+```
+{
+  "nama": "",
+  "email": "email-gak-valid",
+  "no_hp": "123",
+  "statusAktif": true,
+  "department": ""
+}
+```
+Response
+```
+{
+    "errors": [
+        "Nama wajib diisi",
+        "Format email tidak valid",
+        "Nomor HP minimal 10 digit",
+        "Department wajib diisi"
+    ]
 }
 ```
